@@ -1,6 +1,5 @@
-// screens/AddScreen.js
 import React, { useState, useContext } from 'react';
-import { View, TextInput, Button } from 'react-native';
+import { View, TextInput, Button, TouchableOpacity, Text } from 'react-native';
 import { globalStyles } from '../styles/globalStyles';
 import { TodosContext } from '../context/TodosContext';
 
@@ -19,6 +18,7 @@ export default function AddScreen({ navigation }) {
 
   return (
     <View style={globalStyles.container}>
+      <Text style={globalStyles.h1}>Add new task</Text>
       <TextInput
         placeholder="Title"
         value={title}
@@ -29,9 +29,13 @@ export default function AddScreen({ navigation }) {
         placeholder="Description"
         value={description}
         onChangeText={setDescription}
-        style={globalStyles.input}
+        multiline={true}
+        numberOfLines={4}
+        style={globalStyles.inputDesc}
       />
-      <Button title="Add" onPress={addTodo} />
+      <TouchableOpacity onPress={addTodo} style={globalStyles.button}>
+        <Text style={globalStyles.buttonText}>+ Add new task</Text>
+      </TouchableOpacity>
     </View>
   );
 }
