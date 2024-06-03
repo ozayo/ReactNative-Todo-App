@@ -1,4 +1,3 @@
-// styles/globalStyles.js
 import { StyleSheet } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
@@ -8,31 +7,109 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: '#f8f8f8',
   },
   text: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#333',
   },
   h1: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#333',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  h2: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 5,
+    marginTop: 5,
+  },
+  itemtitle: {
+    fontWeight: 'bold',
+    marginBottom: 5,
+    paddingVertical: 8,
+    fontSize: 16,
   },
   input: {
     borderWidth: 1,
     borderColor: '#ddd',
     padding: 10,
     marginVertical: 10,
-    fontSize: 18,
+    fontSize: 15,
     borderRadius: 6,
   },
-  button: {
-    backgroundColor: '#6200ea',
+  inputDesc: {
+    borderWidth: 1,
+    borderColor: '#ddd',
     padding: 10,
+    marginVertical: 10,
+    fontSize: 15,
+    borderRadius: 6,
+    height: 100,
+    textAlignVertical: 'top',
+  },
+  button: {
+    backgroundColor: '#8610db',
+    paddingVertical: 8,
+    paddingHorizontal: 10,
     marginVertical: 5,
     borderRadius: 5,
     alignItems: 'center',
   },
   buttonText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 14,
+  },
+  TopButton: {
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    borderColor: '#a745ee',
+    borderWidth: 1,
+  },
+  TopButtonText: {
+    color: '#8610db',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  header: {
+    backgroundColor: '#8610db',
+  },
+   buttonDelete: {
+    backgroundColor: '#f34e1d',
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    marginVertical: 5,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  headerTitle: {
+    fontWeight: 'bold',
+    color: '#fff',
+    fontSize: 18,
+  },
+  headerTint: {
+    color: '#fff',
+  },
+  itemContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 5,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    backgroundColor: '#e8e8e8',
+  },
+  itemImage: {
+    width: 20,
+    height: 20,
+    marginRight: 10,
+  },
+  itemTitle: {
+    fontWeight: 'bold',
+    fontSize: 13,
   },
 });
