@@ -1,4 +1,3 @@
-// screens/EditTaskScreen.js
 import React, { useState, useContext } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { globalStyles } from '../styles/globalStyles';
@@ -22,17 +21,21 @@ export default function EditTaskScreen({ route, navigation }) {
   return (
     <View style={globalStyles.container}>
       <Text style={globalStyles.h1}>Edit Task</Text>
+      <Text>Title:</Text>
       <TextInput
         placeholder="Title"
         value={title}
         onChangeText={setTitle}
         style={globalStyles.input}
       />
+      <Text>Description:</Text>
       <TextInput
         placeholder="Description"
         value={description}
         onChangeText={setDescription}
-        style={globalStyles.input}
+        multiline={true}
+        numberOfLines={4}
+        style={globalStyles.inputDesc}
       />
       <TouchableOpacity onPress={updateTodo} style={globalStyles.button}>
         <Text style={globalStyles.buttonText}>Save</Text>
